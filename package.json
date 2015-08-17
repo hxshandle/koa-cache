@@ -22,13 +22,18 @@
   "homepage": "https://github.com/hxshandle/koa-cache",
   "devDependencies": {
     "koa": "^0.21.0",
+    "koa-bodyparser": "^2.0.1",
+    "koa-json": "^1.1.1",
     "koa-redis": "^1.0.0",
     "mocha": "^2.2.5",
     "should": "^7.0.4",
     "supertest": "^1.0.1"
   },
   "dependencies": {
+    "copy-to": "^2.0.1",
     "debug": "^2.2.0",
+    "events": "^1.0.2",
+    "lodash": "^3.10.1",
     "uid-safe": "^2.0.0"
   }
 }
