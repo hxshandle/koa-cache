@@ -6,10 +6,14 @@ var http = require('http');
 var json = require('koa-json');
 var cache = require('../../');
 var bodyParser = require('koa-bodyparser');
+var redisStore = require('koa-redis');
+
 
 var app = koa();
 
-app.use(cache());
+app.use(cache({
+  store:redisStore()
+}));
 app.use(bodyParser());
 app.use(json());
 
@@ -21,6 +25,7 @@ app.use(function *controllers(){
     case '/getCache':
       debug('body is ',this.request.body);
       var t = this;
+      debug("cache is ",this.cache.get);
       var data = yield this.cache.get("getCache",function(){
         return t.request.body;
       });
