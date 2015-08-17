@@ -12,7 +12,8 @@ var redisStore = require('koa-redis');
 var app = koa();
 
 app.use(cache({
-  store:redisStore()
+  store:redisStore(),
+  prefix:"koa-cache-test:"
 }));
 app.use(bodyParser());
 app.use(json());
@@ -23,9 +24,7 @@ app.use(function *controllers(){
       this.status = 404;
       break;
     case '/getCache':
-      debug('body is ',this.request.body);
       var t = this;
-      debug("cache is ",this.cache.get);
       var data = yield this.cache.get("getCache",function(){
         return t.request.body;
       });

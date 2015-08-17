@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/hxshandle/koa-cache",
   "devDependencies": {
+    "co": "^4.6.0",
     "koa": "^0.21.0",
     "koa-bodyparser": "^2.0.1",
     "koa-json": "^1.1.1",
