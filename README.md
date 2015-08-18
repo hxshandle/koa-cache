@@ -1,8 +1,16 @@
 
 [![Build Status](https://travis-ci.org/hxshandle/koa-cache.svg?branch=master)](https://travis-ci.org/hxshandle/koa-cache)
+[![NPM version][npm-image]][npm-url]
 
 # koa-cache
 koa-cache is a koa middleware which provide cache for app.
+
+## Install
+```
+npm install koa-cache-it
+
+```
+
 
 ## Usage 
 
@@ -27,3 +35,7 @@ app.use(function * controller(){
   * get(key[,function *(){}])
   * set(key,value)
   * destory(key)
+
+
+[npm-image]: https://img.shields.io/npm/v/koa.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/koa-cache-it
