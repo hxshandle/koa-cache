@@ -24,12 +24,22 @@ describe('koa-cache-test', function () {
       .send({ dateTime: date})
       .expect({dateTime:date},done);
     });
-
     it('getDate should return cached date time', function (done) {
       request(app)
       .post('/getCache')
       .send({ dateTime: "1234"})
       .expect({dateTime:date},done);
+    });
+    it('updateDate should update cached data with given value',function(done){
+      request(app)
+      .post('/updateCache')
+      .send({ dateTime: "1234"})
+      .expect({success:true},function (){
+        request(app)
+        .post('/getCache')
+        .send({ dateTime: "34343"})
+        .expect({dateTime:"1234"},done);
+      });
     });
   });
 });

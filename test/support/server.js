@@ -25,10 +25,14 @@ app.use(function *controllers(){
       break;
     case '/getCache':
       var t = this;
-      var data = yield this.cache.get("getCache",function(){
+      var data = yield this.cache.get("getCache",function * (){
         return t.request.body;
       });
       this.body = data;
+      break;
+    case '/updateCache':
+      yield this.cache.set("getCache",this.request.body);
+      this.body = {success:true};
       break;
     default:
       this.body = "do nothing...";
