@@ -1,5 +1,7 @@
-# koa-cache
 
+[![Build Status](https://travis-ci.org/hxshandle/koa-cache.svg?branch=master)](https://travis-ci.org/hxshandle/koa-cache)
+
+# koa-cache
 koa-cache is a koa middleware which provide cache for app.
 
 ## Usage 
