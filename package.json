@@ -1,7 +1,7 @@
 {
-  "name": "koa-cache",
+  "name": "koa-cache-it",
   "version": "0.1.0",
-  "description": "koa-cache is a koa middleware which provide cache for app.",
+  "description": "koa-cache-it is a koa middleware which provide cache for app.",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
