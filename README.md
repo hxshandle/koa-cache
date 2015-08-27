@@ -16,7 +16,7 @@ npm install koa-cache-it
 
 ``` JavaScript
 var app = require('koa')();
-var cache = require('koa-cache');
+var cache = require('koa-cache-it');
 app.use(cache({
           store:redisStore(),
           prefix:"koa-cache-test:"
